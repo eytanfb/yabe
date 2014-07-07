@@ -4,13 +4,16 @@ import java.util.*;
 import javax.persistence.*;
  
 import play.db.jpa.*;
+import play.data.validation.*;
  
 @Entity
 public class Comment extends Model {
  
+    @Required
     public String author;
     public Date postedAt;
      
+    @Required
     @Lob
     public String content;
     
